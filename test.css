@@ -1,0 +1,68 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Background nero */
+}
+
+.logo-container {
+    position: relative;
+    text-align: center;
+    animation: dropDown 1s ease-out forwards;
+}
+
+.logo {
+    width: 500px;
+    opacity: 0;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s 1s forwards;
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Ingrandisce il logo al passaggio del mouse */
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #fff; /* Cambiato il colore del bordo per contrasto */
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: spin 2s linear infinite, fadeOut 1s 4s forwards;
+    opacity: 1;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
