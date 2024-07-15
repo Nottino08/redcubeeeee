@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #ff0000, #9000ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.benvenuto {
+    font-family: 'Acme', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0px;
+    animation: type 4s steps(60, end) forwards;
+}
+
+@keyframes type {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
+}

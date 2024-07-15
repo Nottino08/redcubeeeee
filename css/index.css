@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.testo {
+    text-align: center;
+    font-family: cursive;
+    font-size: 15px;
+    color: blue;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) translate(50px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(50px) rotate(-360deg);
+    }
+}
